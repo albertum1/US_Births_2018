@@ -1,0 +1,426 @@
+ATTEND Attendant at Birth 
+1 Doctor of Medicine (MD) 
+2 Doctor of Osteopathy (DO) 
+3 Certified Nurse Midwife (CNM) 
+4 Other Midwife 
+5 Other 
+9 Unknown or not stated
+
+BFACIL Birth Place 
+1Hospital 
+2 Freestanding Birth Center 
+3 Home (intended) 
+4 Home (not intended) 
+5 Home (unknown if intended) 
+6 Clinic / Doctor’s Office 
+7 Other 
+9 Unknown
+
+BMI Body Mass Index (Use reporting flag in field 282)
+13.0-69.9 Body Mass Index 
+99.9 Unknown or not stated
+
+CIG_0 Cigarettes Before Pregnancy
+00-97 Number of cigarettes daily
+98 98 or more cigarettes daily
+99 Unknown or not stated
+
+DBWT Birth Weight – Detail in Grams (Edited) 
+0227-8165 Number of grams 
+9999 Not stated birth weight
+
+DLMP_MM Last Normal Menses Month 
+01 January 
+02 February 
+03 March 
+04 April 
+05 May 
+06 June 
+07 July 
+08 August 
+09 September 
+10 October 
+11 November 
+12 December 
+99 Unknown or not stated
+
+DLMP_YY Last Normal Menses Year 
+nnnn Year of last normal menses 
+9999 Unknown or not stated
+
+DMAR Marital Status United States and all Outlying Areas of the United States except Puerto Rico 
+1 Married
+2 Unmarried
+
+DOB_MM Birth Month 
+01 January 
+02 February 
+03 March 
+04 April 
+05 May 
+06 June 
+07 July 
+08 August 
+09 September 
+10 October 
+11 November 
+12 December
+
+DOB_TT Time of Birth 
+0000-2359 Time of Birth 
+9999 Not Stated
+
+DOB_WK Birth Day of Week 
+1 Sunday
+2 Monday 
+3 Tuesday 
+4 Wednesday 
+5 Thursday 
+6 Friday 
+7 Saturday
+
+DOB_YY Birth Year 
+2018 Year of birth
+
+FAGECOMB Father’s Combined Age 
+09-98 Father’s combined age in years 
+99 Unknown or not stated
+
+FEDUC Father’s Education 
+1 8th grade or less 
+2 9th through 12th grade with no diploma 
+3 High school graduate or GED completed 
+4 Some college credit, but not a degree. 
+5 Associate degree (AA,AS) 
+6 Bachelor’s degree (BA, AB, BS) 
+7 Master’s degree (MA, MS, MEng, MEd, MSW, MBA) 
+8 Doctorate (PhD, EdD) or Professional Degree (MD, DDS, DVM, LLB, JD) 
+9 Unknown
+
+FHISPX Father’s Hispanic Origin 
+0 Non-Hispanic
+1 Mexican 
+2 Puerto Rican 
+3 Cuban 
+4 Central or South American 
+5 Dominican 
+6 Other and Unknown Hispanic 
+9 Origin unknown or not stated
+
+FRACE15 Father’s Race Recode 15 
+01 White (only) 
+02 Black (only) 
+03 AIAN (only) 
+04 Asian Indian (only) 
+05 Chinese (only) 
+06 Filipino (only) 
+07 Japanese (only) 
+08 Korean (only) 
+09 Vietnamese (only) 
+10 Other Asian (only) 
+11 Hawaiian (only) 
+12 Guamanian (only) 
+13 Samoan (only) 
+14 Other Pacific Islander (only) 
+15 More than one race 
+99 Unknown or Not Stated
+
+FRACE31 Father’s Race Recode 31 
+01 White (only) [only one race reported] 
+02 Black (only) 
+03 AIAN (American Indian or Alaskan Native) (only) 
+04 Asian (only) 
+05 NHOPI (Native Hawaiian or Other Pacific Islander) (only) 
+06 Black and White 
+07 Black and AIAN 
+08 Black and Asian 
+09 Black and NHOPI 
+10 AIAN and White 
+11 AIAN and Asian 
+12 AIAN and NHOPI 
+13 Asian and White 
+14 Asian and NHOPI 
+15 NHOPI and White 
+16 Black, AIAN, and White 
+17 Black, AIAN, and Asian 
+18 Black, AIAN, and NHOPI 
+19 Black, Asian, and White 
+20 Black, Asian, and NHOPI 
+21 Black, NHOPI, and White 
+22 AIAN, Asian, and White 
+23 AIAN, NHOPI, and White 
+24 AIAN, Asian, and NHOPI 
+25 Asian, NHOPI, and White 
+26 Black, AIAN, Asian, and White 
+27 Black, AIAN, Asian, and NHOPI 
+28 Black, AIAN, NHOPI, and White 
+29 Black, Asian, NHOPI, and White 
+30 AIAN, Asian, NHOPI, and White 
+31 Black, AIAN, Asian, NHOPI, and White 
+99 Unknown or Not Stated
+
+FRACE6 Father’s Race Recode 6 
+1 White (only) 
+2 Black (only) 
+3 AIAN (only) 
+4 Asian (only) 
+5 NHOPI (only) 
+6 More than one race 
+9 Unknown or Not Stated
+
+ILLB_R Interval Since Last Live Birth Recode - reporting flag in field 126
+000-003 Plural delivery 
+004-300 Months since last live birth
+888 Not applicable / 1st live birth 
+999 Unknown or not stated
+
+ILOP_R Interval Since Last Other Pregnancy Recode Use reporting flag in field 126 
+000-003 Plural delivery 
+004-300 Months since last live birth 
+888 Not applicable / 1st natality event 
+999 Unknown or not stated
+
+ILP_R Interval Since Last Pregnancy Recode Use reporting flag in field 126
+000-003 Plural delivery 
+004-300 Months since last live birth 
+888 Not applicable / no previous pregnancy 
+999 Unknown or not stated
+
+IMP_SEX Imputed Sex 
+Blank Infant Sex not Imputed 
+1 Infant Sex is Imputed
+
+IP_GON Gonorrhea 
+Y Yes
+N No
+U Unknown or not stated
+
+LD_INDL Induction of Labor 
+Y Yes 
+N No 
+U Unknown or not stated
+
+MAGER Mother’s Single Years of Age 
+12 10 – 12 years 
+13 13 years
+14 14 years 
+15 15 years 
+16 16 years 
+17 17 years 
+18 18 years 
+19 19 years 
+20 20 years 
+21 21 years 
+22 22 years 
+23 23 years 
+24 24 years 
+25 25 years 
+26 26 years 
+27 27 years 
+28 28 years 
+29 29 years 
+30 30 years 
+31 31 years 
+32 32 years 
+33 33 years 
+34 34 years 
+35 35 years 
+36 36 years 
+37 37 years 
+38 38 years 
+39 39 years 
+40 40 years 
+41 41 years 
+42 42 years 
+43 43 years 
+44 44 years
+45 45 years
+46 46 years
+47 47 years
+48 48 years
+49 49 years
+50 50 years and over
+
+MAGE_IMPFLG Mother’s Age Imputed 
+Blank Age not imputed Due to missing data, age imputed. 
+1 Age imputed
+
+MAR_IMP Mother’s Marital Status Imputed 
+Blank Marital Status not imputed 
+1 Marital Status imputed
+
+MBSTATE_REC Mother’s Nativity 
+1 Born in the U.S. (50 US States)
+2 Born outside the U.S. (includes possessions)
+3 Unknown or Not Stated
+
+MEDUC Mother’s Education 
+1 8th grade or less 
+2 9th through 12th grade with no diploma 
+3 High school graduate or GED completed 
+4 Some college credit, but not a degree. 
+5 Associate degree (AA,AS) 
+6 Bachelor’s degree (BA, AB, BS) 
+7 Master’s degree (MA, MS, MEng, MEd, MSW, MBA) 
+8 Doctorate (PhD, EdD) or Professional Degree (MD, DDS, DVM, LLB, JD) 
+9 Unknown
+
+MHISPX Mother’s Hispanic Origin 
+0 Non-Hispanic
+1 Mexican
+2 Puerto Rican
+3 Cuban
+4 Central or South American
+5 Dominican
+6 Other and Unknown Hispanic
+9 Origin unknown or not stated
+
+MRACE15 Mother’s Race Recode 15 United States and all Outlying Areas of the United States except Puerto Rico 
+01 White (only)
+02 Black (only)
+03 AIAN (only)
+04 Asian Indian (only)
+05 Chinese (only)
+06 Filipino (only)
+07 Japanese (only)
+08 Korean (only)
+09 Vietnamese (only)
+10 Other Asian (only)
+11 Hawaiian (only)
+12 Guamanian (only)
+13 Samoan (only)
+14 Other Pacific Islander (only)
+15 More than one race
+
+MRACE31 Mother’s Race Recode 31 United States and all Outlying Areas of the United States except Puerto Rico
+01 White (only) [only one race reported] 02 Black (only) 03 AIAN (American Indian or Alaskan Native) (only) 
+04 Asian (only) 05 NHOPI (Native Hawaiian or Other Pacific Islander) (only) 06 Black and White 07 Black and AIAN 08 Black and Asian 09 Black and NHOPI 10 AIAN and White 11 AIAN and Asian 12 AIAN and NHOPI 
+13 Asian and White 
+14 Asian and NHOPI 
+15 NHOPI and White 
+16 Black, AIAN, and White 
+17 Black, AIAN, and Asian 
+18 Black, AIAN, and NHOPI 
+19 Black, Asian, and White 
+20 Black, Asian, and NHOPI 
+21 Black, NHOPI, and White 
+22 AIAN, Asian, and White 
+23 AIAN, NHOPI, and White 
+24 AIAN, Asian, and NHOPI 
+25 Asian, NHOPI, and White 
+26 Black, AIAN, Asian, and White 
+27 Black, AIAN, Asian, and NHOPI 
+28 Black, AIAN, NHOPI, and White 
+29 Black, Asian, NHOPI, and White 
+30 AIAN, Asian, NHOPI, and White 
+31 Black, AIAN, Asian, NHOPI, and White
+
+MRACEIMP Mother’s Race Imputed Flag 
+Blank Mother’s race not imputed
+1 Unknown race imputed
+2 All other races, formerly coded 09, imputed.
+
+MRACE6 Mother’s Race Recode 6 United States and all Outlying Areas of the United States except Puerto Rico 
+1 White (only)
+2 Black (only)
+3 AIAN (only)
+4 Asian (only)
+5 NHOPI (only)
+6 More than one race
+
+MTRAN Mother Transferred - Use reporting flag in field 126
+Y Yes 
+N No 
+U Unknown
+
+M_Ht_In Mother’s Height in Total Inches 
+30-78 Height in inches 
+99 Unknown or not stated
+
+NO_INFEC No Infections Reported 
+1 True
+0 False
+9 Not Reported
+
+NO_MMORB No Maternal Morbidity Reported 
+1 True 
+0 False 
+9 Not Reported
+
+NO_RISKS No Risk Factors Reported 
+1 True
+0 False 
+9 Not Reported
+
+PAY Payment Source for Delivery 
+1 Medicaid 
+2 Private Insurance 
+3 Self-Pay 
+4 Indian Health Service 
+5 CHAMPUS/TRICARE 
+6 Other Government (Federal, State, Local) 
+8 Other 
+9 Unknown
+
+PAY_REC Payment Recode 
+1 Medicaid 
+2 Private Insurance 
+3 Self Pay 
+4 Other 
+9 Unknown
+
+PRECARE Month Prenatal Care Began 
+00 No prenatal care
+01-10 Month prenatal care began 
+99 Unknown or not stated
+
+PREVIS Number of Prenatal Visits 
+00-98 Number of prenatal visits 
+99 Unknown or not stated
+
+PRIORDEAD Prior Births Now Dead 
+00-30 Number of children dead from previous live births. 
+99 Unknown or not stated
+
+PRIORLIVE Prior Births Now Living 
+00-30 Number of children still living from previous live births. 
+99 Unknown or not stated
+
+PRIORTERM Prior Other Terminations 
+00-30 Number other terminations 
+99 Unknown or not stated
+
+PWgt_R Pre-pregnancy Weight Recode 
+075-375 Weight in pounds
+999 Unknown or not stated
+
+RDMETH_REC Delivery Method Recode 
+1 Vaginal (excludes vaginal after previous C-section) 
+2 Vaginal after previous c-section 
+3 Primary C-section 
+4 Repeat C-section 
+5 Vaginal (unknown if previous c-section) 
+6 C-section (unknown if previous c-section) 
+9 Not stated
+
+RESTATUS Residence Status United States 
+1 RESIDENT: State and county of occurrence and residence are the same. 
+2 INTRASTATE NONRESIDENT: State of occurrence and residence are the same but county is different. 
+3 INTERSTATE NONRESIDENT: State of occurrence and residence are different but both are one of the 50 US states or District of Columbia. 
+4 FOREIGN RESIDENT: The state of residence is not one of the 50 US states or District of Columbia.
+
+RF_CESAR Previous Cesarean 
+Y Yes 
+N No 
+U Unknown or not stated
+
+SEX Sex of Infant 
+M Male 
+F Female
+
+WTGAIN Weight Gain 
+00-97 
+98 Weight gain in pounds 98 pounds and over 
+99 Unknown or not stated
+
+
