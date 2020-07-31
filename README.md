@@ -1,4 +1,5 @@
-# US_Births_2018
+# Mod2 Project: US_Births_2018
+created by Albert Um DS Flatiron Cohort 06/22/20
 The dataset can be accessed from kaggle:<br> https://www.kaggle.com/des137/us-births-2018 <br> Credit to Amol Deskmukh for cleaning the dataset from <br> https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools <br>
 Look at 'US_Birth_Columns' for column description pulled from <br>https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools
 ## Introduction
