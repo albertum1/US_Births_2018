@@ -9,7 +9,7 @@ For this dataset, 'DBWT'(Birth Weight) will be my target variable. Under weight 
 ## Files on this Repo
 'US_Birth_Columns': description of columns and what each value means<br>
 'Final.ipynb': Lengthy notebook describing my work
-'/Images': Folder containing plotted images
+'Images Folder': Folder containing plotted images
 
 ## Key Insights
 The purpose of this project is to find some variables that can best explain the variances of the baby birth weight. In a normal world, there should be no differences among baby weights regardless of features. However, we don't live in a normal world. Creating a best-fit line and interpretting its coefficients can bring light into why there might be such differences. 
