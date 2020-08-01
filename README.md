@@ -19,7 +19,8 @@ P-value < 0.05
 Here is a boxplot of the distributions of baby weights separated by the number of total months the mother got checkups. The 1 on the x axis represents one month of checkups, 2 as 2 months of checkups, and on. Although these groups look pretty similiar, they're not!
 P-value < 0.05
 ![](Images/figure5.png)
-Here we have anothe rboxplot of baby weights eparated by the "length of pregnancy"(in months). It's pretty clear to see that there is a difference of distributions even without running a test. Interestingly, we can kind of draw a line that might best fit this. And it looks like the longer the gestation period, the heavier the baby gets.<br>
+Here we have another boxplot of baby weights separated by the "length of pregnancy"(in months). Please note the possible errors having gestation periods of 12 months. The "pregnancy_length" was feature engineered by subtracting the Month,Year of last Normal Menses Month[DLMP_MM, DLPMP_YY] from the Month,Year of the baby born[DOB_MM, DOB_YY]. "pregnancy_length" represents a crude attempt on the mothers gestation period. <br> 
+With that note set aside, it's pretty clear to see that there is a difference of distributions even without running a test. Interestingly, we can kind of draw a line that might best fit this. And it looks like the longer the gestation period, the heavier the baby gets.<br>
 But what happens if we make it a little bit more complex.
 ![](Images/figure8.png)
 Here we have a the similar boxplot of baby weights separated by the length of pregnancy. In addition, each month has two boxplots. The orange boxes represent the cases where mother had to undergo C-section and the blue boxes are those that did not.<br>
