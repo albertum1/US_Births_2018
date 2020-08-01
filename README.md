@@ -25,6 +25,17 @@ But what happens if we make it a little bit more complex.
 Here we have a the similar boxplot of baby weights separated by the length of pregnancy. In addition, each month has two boxplots. The orange boxes represent the cases where mother had to undergo C-section and the blue boxes are those that did not.<br>
 It's kind of tough to draw a best fit line to accurately represent this. However with the power of computers, I can try to create a best fit-line.
 
+## Interesting Coefficients:<br>
+(ex: **feature**:coefficient)<br>
+**smoked_None**: 31.81<br>
+If the mother has never smoked the model increased the expected weight by 31 grams. It's very possible that the mothers who were smokers before could have had other health conditions. <br>
+
+**PRECARE**: 429.28(+492.28/sd(standard deviation))
+For every 1.5 months of checkups, the model increased the expected weight by 429 grams. Pre-natal care is pretty expensive. May it has something to do with class and income back grounds.<br>
+
+**RDMETH_REC_3**: -1389.83<br>
+If the mother had to receive Cesearean Section, the model subtracted 1400 grams. This finding can als obe interepreted as... the mothers that required C-section could be due to other baby complications.<br>
+
 ## Key Insights
-The purpose of this project is to find some variables that can best explain the variances of the baby birth weight. In a normal world, there should be no differences among baby weights regardless of features. However, we don't live in a normal world. Creating a best-fit line and interpretting its coefficients can bring light into why there might be such differences. 
-Calculating a human baby's weight can be very complex. Nonetheless, we can still try to draw some understanding of what may determine a babies weight.
+Calculating a human baby's weight can be very complex. Nonetheless, we can still try to draw some understanding of what may determine a babies weight. <br>
+In a simple world, everything would be normal and even. But unfortunately, many things aren't. Looking back to the coefficients of Prenatal Care, why does the number of monthly checkups determine baby weight? Is prenatal care easily avaiable for all classes or is there some economic hurdle that is creating this difference? This model isn't supposed to create predictions, it's to address findings so that we can eventually break predictors.
