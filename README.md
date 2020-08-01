@@ -18,7 +18,12 @@ P-value < 0.05
 ![](Images/figure6.png)
 Here is a boxplot of the distributions of baby weights separated by the number of total months the mother got checkups. The 1 on the x axis represents one month of checkups, 2 as 2 months of checkups, and on. Although these groups look pretty similiar, they're not!
 P-value < 0.05
-![](Images/figure78.png)
+![](Images/figure5.png)
+Here we have anothe rboxplot of baby weights eparated by the "length of pregnancy"(in months). It's pretty clear to see that there is a difference of distributions even without running a test. Interestingly, we can kind of draw a line that might best fit this. And it looks like the longer the gestation period, the heavier the baby gets.<br>
+But what happens if we make it a little bit more complex.
+![](Images/figure8.png)
+Here we have a the similar boxplot of baby weights separated by the length of pregnancy. In addition, each month has two boxplots. The orange boxes represent the cases where mother had to undergo C-section and the blue boxes are those that did not.<br>
+It's kind of tough to draw a best fit line to accurately represent this. However with the power of computers, I can try to create a best fit-line.
 
 ## Key Insights
 The purpose of this project is to find some variables that can best explain the variances of the baby birth weight. In a normal world, there should be no differences among baby weights regardless of features. However, we don't live in a normal world. Creating a best-fit line and interpretting its coefficients can bring light into why there might be such differences. 
