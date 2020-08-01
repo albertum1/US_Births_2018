@@ -33,7 +33,7 @@ My final model had a R2 score 0.38 with 71 features. I'll break down some coeffi
 If the mother has never smoked the model increased the expected weight by 31 grams. It's very possible that the mothers who were smokers before could have had other health conditions. <br>
 
 **PRECARE**: 429.28(+492.28/sd(standard deviation))
-For every 1.5 months of checkups, the model increased the expected weight by 429 grams. Pre-natal care is pretty expensive. May it has something to do with class and income back grounds.<br>
+For every 1.5 months of checkups, the model increased the expected weight by 429 grams. Pre-natal care is pretty expensive. Maybe, it has something to do with class and income back grounds.<br>
 
 **RDMETH_REC_3**: -1389.83<br>
 If the mother had to receive Cesearean Section, the model subtracted 1400 grams. This finding can als obe interepreted as... the mothers that required C-section could be due to other baby complications.<br>
