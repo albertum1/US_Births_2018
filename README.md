@@ -4,7 +4,7 @@
 The dataset can be accessed from kaggle:<br> https://www.kaggle.com/des137/us-births-2018 <br> Credit to Amol Deskmukh for cleaning the dataset from <br> https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools <br>
 Look at 'US_Birth_Columns' for column description pulled from <br>https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools
 ## Introduction
-For this dataset, 'DBWT'(Birth Weight) will be my target variable. Under weight babies can be healthy even though they are small, however, low-weight babies can have some serious problems. I'll try to create a best fit-line and interpret some of its coefficients. The dataset contains around 3.8 million rows and 55 columns.
+Birth weight will be my dependant variabble(column 'DBWT' from dataset). Under weight babies can be healthy even though they are small, however, low-weight babies can have some serious problems. I'll try to create a best fit-line and interpret some of its coefficients. The dataset contains around 3.8 million rows and 55 columns.
 
 ## Files on this Repo
 'US_Birth_Columns': description of columns and what each value means<br>
