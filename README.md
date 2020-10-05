@@ -1,15 +1,26 @@
 # Mod2 Project: US_Births_2018
-##### created by Albert Um DS Flatiron Cohort 06/22/20<br>
----
-The dataset can be accessed from kaggle:<br> https://www.kaggle.com/des137/us-births-2018 <br> Credit to Amol Deskmukh for cleaning the dataset from <br> https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools <br>
-Look at 'US_Birth_Columns' for column description pulled from <br>https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools
-## Introduction
-Birth weight will be my dependant variabble(column 'DBWT' from dataset). Under weight babies can be healthy even though they are small, however, low-weight babies can have some serious problems. I'll try to create a best fit-line and interpret some of its coefficients. The dataset contains around 3.8 million rows and 55 columns.
 
-## Files on this Repo
-'US_Birth_Columns': description of columns and what each value means<br>
-'Final.ipynb': Lengthy notebook describing my work<br>
-'/Images': Folder containing plotted images
+Albert Um DS Flatiron Cohort 06/22/20<br>
+
+# Project
+I am looking to extract coefficients of independent variables that can explain baby weight(pre-birth). Coefficients will be extracted using linear regression with regularization. 
+
+
+The dataset can be accessed [here](https://www.kaggle.com/des137/us-births-2018) <br>
+Look at 'US_Birth_Columns' for column description pulled from [here](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools)
+<br> Credit to Amol Deskmukh for cleaning the dataset from [CDC Website](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools).
+
+---
+
+# Introduction
+Birth weight will be my dependant variable(column 'DBWT' from dataset). Under weight babies can be healthy even though they are small, however, low-weight babies can have some serious problems. I'll try to create a best fit-line and interpret some of its coefficients. The dataset contains around 3.8 million rows and 55 columns.
+
+## Structure of Repository
+- 'US_Birth_Columns': description of columns and what each value means<br>
+- 'Final.ipynb': Lengthy notebook describing my work<br>
+- 'Adjustments.ipynb': adding notebooks post graduation <br>
+- '/Images': Folder containing plotted images
+- 'README.md'
 
 ## Acknowledge the differences
 ![](Images/figure3.png)
