@@ -6,14 +6,6 @@ Albert Um DS Flatiron Cohort 06/22/20<br>
 I am looking to extract coefficients of independent variables that can explain baby weight(pre-birth). Coefficients will be extracted using linear regression with regularization. 
 
 
-The dataset can be accessed [here](https://www.kaggle.com/des137/us-births-2018) <br>
-Look at 'US_Birth_Columns' for column description pulled from [here](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools)
-<br> Credit to Amol Deskmukh for cleaning the dataset from [CDC Website](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm#Tools).
-
----
-
-# Introduction
-Birth weight will be my dependant variable(column 'DBWT' from dataset). Under weight babies can be healthy even though they are small, however, low-weight babies can have some serious problems. I'll try to create a best fit-line and interpret some of its coefficients. The dataset contains around 3.8 million rows and 55 columns.
 
 ## Structure of Repository
 - 'US_Birth_Columns': description of columns and what each value means<br>
@@ -22,20 +14,42 @@ Birth weight will be my dependant variable(column 'DBWT' from dataset). Under we
 - '/Images': Folder containing plotted images
 - 'README.md'
 
-## Acknowledge the differences
-![](Images/figure3.png)
-Here is a plot of 2 distributions of baby weights overlaying each other. The blue represents the mothers who smoked daily before inception and the orange are those who have not. Although they seem to be closely aligned, they are statistically different.<br>
-P-value < 0.05
-![](Images/figure6.png)
-Here is a boxplot of the distributions of baby weights separated by the number of total months the mother got checkups. The 1 on the x axis represents one month of checkups, 2 as 2 months of checkups, and on. Although these groups look pretty similiar, they're not!
-P-value < 0.05
-![](Images/figure5.png)
-Here we have another boxplot of baby weights separated by the "length of pregnancy"(in months). Please note the possible errors having gestation periods of 12 months. The "pregnancy_length" was feature engineered by subtracting the Month,Year of last Normal Menses Month[DLMP_MM, DLPMP_YY] from the Month,Year of the baby born[DOB_MM, DOB_YY]. "pregnancy_length" represents a crude attempt on the mothers gestation period. <br> 
-With that note set aside, it's pretty clear to see that there is a difference of distributions even without running a test. Interestingly, we can kind of draw a line that might best fit this. And it looks like the longer the gestation period, the heavier the baby gets.<br>
-But what happens if we make it a little bit more complex.
-![](Images/figure8.png)
-Here we have a the similar boxplot of baby weights separated by the length of pregnancy. In addition, each month has two boxplots. The orange boxes represent the cases where mother had to undergo C-section and the blue boxes are those that did not.<br>
-It's kind of tough to draw a best fit line to accurately represent this. However with the power of computers, I can try to create a best fit-line.
+# Business Case
+1. Target/Identifying Stakeholders
+    - To whom does it matter?
+        1. Hospitals: Under weight babies can be healthy even though they are small, however, low-weight babies can have serious problems.
+        2. Expecting Mothers: Looking at 
+2. Focusing on coefficients that have a large impact in determining weight
+
+
+
+
+
+# Data
+The csv data can be downloaded from [here](http://www.nber.org/data/vital-statistics-natality-data.html). It has been compiled by the National Center for Health Statistics(NCHS) National Vital Statistics System division. The 2018 Natality dataset contains 240 columns with 3.8 million rows. I have reduced the columns to 79 columns and I random sampled 750,000 rows for this project.
+
+
+
+# Visualizations
+
+![](Images/WeightDistribution.png)
+
+
+
+![](Images/WeightAge.png)
+
+![](Images/WeightGest.png)
+
+
+
+# Model Evaluation
+I first split the dataset using sklearn's train_test_split. The X_test will be used to evaluate the model. <br>
+In order to mechanically choose which variables to explain, I decided to fit a gradient boosted decision tree and plot feature importance. <br>
+To do this, I needed to split AGAIN the X_train and y_train to X_train_lgbm, X_val_lgbm, y_train_lgbm, and y_val_lgbm. <br>
+The parameters were hyper-tuned using a random-search like package called 'optuna'. The top 20 variables from feature importance was then showcased for explanation of coefficients.
+
+To extract coefficients, I'll use linear regression with l1 regularization. I chose lasso because it acts as feature selection by punishing certain coefficients to zero. 
+
 
 ## Interesting Coefficients:<br>
 My final model had a R2 score 0.38 with 71 features. I'll break down some coefficients I found interesting.<br>
