@@ -33,13 +33,14 @@ The csv data can be downloaded from [here](http://www.nber.org/data/vital-statis
 # Visualizations
 
 ![](Images/WeightDistribution.png)
-
+The distribution of the dependant variable, baby weight. There seems to be a slight left skew as the median is greater than the mean. 
 
 
 ![](Images/WeightAge.png)
+The vertical lines represent the 95% confidence intervals.
 
 ![](Images/WeightGest.png)
-
+In general, if birth is before the completion of the 37th week than it can be considered "pre-term". Week 37 to Week 42 can be considered normal and births after week 42 can be considered "post-term".
 
 
 # Model Evaluation
@@ -51,17 +52,8 @@ The parameters were hyper-tuned using a random-search like package called 'optun
 To extract coefficients, I'll use linear regression with l1 regularization. I chose lasso because it acts as feature selection by punishing certain coefficients to zero. 
 
 
-## Interesting Coefficients:<br>
-My final model had a R2 score 0.38 with 71 features. I'll break down some coefficients I found interesting.<br>
-(ex: **feature**:coefficient)<br>
-**smoked_None**: 31.81<br>
-If the mother has never smoked the model increased the expected weight by 31 grams. It's very possible that the mothers who were smokers before could have had other health conditions. <br>
+# Results
 
-**PRECARE**: 429.28(+492.28/sd(standard deviation))
-For every 1.5 months of checkups, the model increased the expected weight by 429 grams. Pre-natal care is pretty expensive. Maybe, it has something to do with class and income back grounds.<br>
-
-**RDMETH_REC_3**: -1389.83<br>
-If the mother had to receive Cesearean Section, the model subtracted 1400 grams. This finding can als obe interepreted as... the mothers that required C-section could be due to other baby complications.<br>
 
 ## Key Insights
 Calculating a human baby's weight can be very complex. Nonetheless, we can still try to draw some understanding of what may determine a babies weight. <br>
