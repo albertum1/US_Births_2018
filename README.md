@@ -44,12 +44,49 @@ In general, if birth is before the completion of the 37th week than it can be co
 
 
 # Model Evaluation
-I first split the dataset using sklearn's train_test_split. The X_test will be used to evaluate the model. <br>
-In order to mechanically choose which variables to explain, I decided to fit a gradient boosted decision tree and plot feature importance. <br>
-To do this, I needed to split AGAIN the X_train and y_train to X_train_lgbm, X_val_lgbm, y_train_lgbm, and y_val_lgbm. <br>
-The parameters were hyper-tuned using a random-search like package called 'optuna'. The top 20 variables from feature importance was then showcased for explanation of coefficients.
+I will use R2 as my metric, as I'm going for a interpretability approach to baby weight. I first split the dataset using sklearn's train_test_split. The X_test will be used to evaluate the model. <br>
 
-To extract coefficients, I'll use linear regression with l1 regularization. I chose lasso because it acts as feature selection by punishing certain coefficients to zero. 
+## Dummy Regressor
+I need a baseline when trying to evaluate my model. The dummy regressor will predict the baby weight mean across all instances.
+
+R2 of Dummy: 0.000
+RMSE of Dummy: 587.60
+
+## Lasso
+To extract coefficients, I'll use linear regression with l1 regularization. I chose lasso because it acts as feature selection by punishing certain coefficients to zero.
+R2 of LassoCV: 0.462
+RMSE of LassoCV: 430.91
+
+![](Images/lassocvcoef.png)
+
+The most significant feature was the gestation period. For every one std move of gestation (2.5 weeks), equates to baby weight increase by 227 grams. Considering the "normal" pregnancy length is 38 weeks, this feature alone can explain the weight of the baby.
+
+Also, please note mothers who are white have a positive coefficient value while mothers who are black have negative coefficients.
+
+## Gradient Boosted Decision Tree
+Due to the size of the dataset, I was unable to successfully create interactions of features. I will now implement a gradient boosted decision tree because decision trees are inherent feature engineers. The boosted decision tree takes what was learned from the previous model to further tune its predictors. In short,the gbdt results can be interpretted as a linear combination of all the trees. 
+For this project, I lowered, the tree depth to 4 for interpretability.
+
+
+Image of the first tree:
+![](Images/gbdt0.png)
+
+The model takes the results from the first tree and builds on top of it creating the second tree, then third, until the loss (in this case rmse) can no longer be lowered on the validation set.
+
+Image of the last tree:
+![](Images/gbdt999.png)
+
+Because it's exhaustive to look at more than 1000 trees to come to a conclusion. I can just look at the feature importance of gain and splits. Gain represents the information gain after splitting and splits represent the number of times a feature was split.
+![](Images/FeatureImportanceGain.png)
+<br>
+
+![](Images/FeatureImportanceSplits.png)
+
+Combgest (Combined Gestation Period) is the most important feature for both gains and splits. 
+
+
+
+
 
 
 # Results
