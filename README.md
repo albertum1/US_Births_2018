@@ -8,9 +8,13 @@ I am looking to extract coefficients of independent variables that can explain b
 
 
 ## Structure of Repository
+Please run the notebooks in this order:<br>
+Exploratory_Visualizations.ipynb &#8594; Model_Evaluation.ipynb &#8594; lgbm_regressor.ipynb
 - 'US_Birth_Columns': description of columns and what each value means<br>
+- 'Exploratory_Visualizations.ipynb': notebook for visualizations<br>
 - 'Final.ipynb': Lengthy notebook describing my work<br>
-- 'Adjustments.ipynb': adding notebooks post graduation <br>
+- 'Model_Evaluation.ipynb': notebook for lasso regression <br>
+- 'lgbm_regressor.ipynb': notebook for gbdt <br>
 - '/Images': Folder containing plotted images
 - 'README.md'
 
@@ -43,7 +47,7 @@ The vertical lines represent the 95% confidence intervals.
 In general, if birth is before the completion of the 37th week than it can be considered "pre-term". Week 37 to Week 42 can be considered normal and births after week 42 can be considered "post-term".
 
 
-# Model Evaluation
+# Model Evaluation/Results
 I will use R2 as my metric, as I'm going for a interpretability approach to baby weight. I first split the dataset using sklearn's train_test_split. The X_test will be used to evaluate the model. <br>
 
 ## Dummy Regressor
@@ -67,6 +71,8 @@ Also, please note mothers who are white have a positive coefficient value while 
 Due to the size of the dataset, I was unable to successfully create interactions of features. I will now implement a gradient boosted decision tree because decision trees are inherent feature engineers. The boosted decision tree takes what was learned from the previous model to further tune its predictors. In short,the gbdt results can be interpretted as a linear combination of all the trees. 
 For this project, I lowered, the tree depth to 4 for interpretability.
 
+R2 of gbdt: 0.521
+RMSE of gbdt: 407.66
 
 Image of the first tree:
 ![](Images/gbdt0.png)
@@ -82,16 +88,17 @@ Because it's exhaustive to look at more than 1000 trees to come to a conclusion.
 
 ![](Images/FeatureImportanceSplits.png)
 
-Combgest (Combined Gestation Period) is the most important feature for both gains and splits. 
+Combgest (Combined Gestation Period) is the most important feature for both gains and splits. It will be interesting to look at the number of occurances the splits took place next.
+
+![](Images/splitcombgest.png)
+Surprisingly, the most occurances of splits for 'combgest' happened between 36 weeks to 41 weeks. It seems in order to accurately predict, the splits occurred mostly on week 36. Further study needs to be done onto why week 36 is so important. <br>
+
+Distribution Plot for 'combgest'
+![](Images/GestDist.png)
 
 
 
 
-
-
-# Results
-
-
-## Key Insights
+## Conclusions
 Calculating a human baby's weight can be very complex. Nonetheless, we can still try to draw some understanding of what may determine a babies weight. <br>
-In a simple world, everything would be normal and even. But unfortunately, many things aren't. Looking back to the coefficients of Prenatal Care, why does the number of monthly checkups determine baby weight? Is prenatal care easily avaiable for all classes or is there some economic hurdle that is creating this difference? This model isn't supposed to create predictions, it's to address findings so that we can eventually break predictors.
+For this project, gestation period had the most impact on determining baby weight. More over, an interaction with pregnancy length can better determine baby weight. For further studies, I will be looking into these specific splits on week 36 to week 41 to better understand baby weight.
