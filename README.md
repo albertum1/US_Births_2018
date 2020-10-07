@@ -1,6 +1,6 @@
 # Understanding Baby Weight Pre-Birth
 
-Albert Um DS Flatiron Cohort 06/22/20<br>
+Albert Um
 
 # Project
 I am looking to extract coefficients of independent variables that can explain baby weight(pre-birth). Coefficients will be extracted using linear regression with regularization. 
@@ -12,7 +12,6 @@ Please run the notebooks in this order:<br>
 Exploratory_Visualizations.ipynb &#8594; Model_Evaluation.ipynb &#8594; lgbm_regressor.ipynb
 - 'US_Birth_Columns': description of columns and what each value means<br>
 - 'Exploratory_Visualizations.ipynb': notebook for visualizations<br>
-- 'Final.ipynb': Lengthy notebook describing my work<br>
 - 'Model_Evaluation.ipynb': notebook for lasso regression <br>
 - 'lgbm_regressor.ipynb': notebook for gbdt <br>
 - '/Images': Folder containing plotted images
